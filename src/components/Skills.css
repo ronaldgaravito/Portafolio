@@ -1,0 +1,146 @@
+/* ===== SKILLS ===== */
+.skills {
+  position: relative;
+}
+
+.skills__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.skills__header .section-subtitle {
+  margin: 0 auto;
+}
+
+/* Badge Cloud */
+.skills__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 3.5rem;
+}
+
+.skills__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 600;
+  border: 1px solid;
+  transition: var(--transition);
+  cursor: default;
+}
+
+.skills__badge:hover {
+  transform: translateY(-3px) scale(1.05);
+  filter: brightness(1.2);
+}
+
+/* Tabs */
+.skills__tabs {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.skills__tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.skills__tab:hover {
+  border-color: rgba(124, 58, 237, 0.3);
+  color: var(--text-primary);
+}
+
+.skills__tab--active {
+  background: var(--gradient-main);
+  border-color: transparent;
+  color: white;
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+}
+
+/* Skill Bars */
+.skills__bars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skills__bar-item {
+  padding: 1.5rem;
+  animation: fadeInUp 0.5s ease both;
+}
+
+.skills__bar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.9rem;
+}
+
+.skills__bar-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.skills__bar-icon {
+  font-size: 1.2rem;
+}
+
+.skills__bar-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.skills__bar-level {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.skills__bar-track {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.skills__bar-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  animation: grow-bar 1s ease forwards;
+  transform-origin: left;
+}
+
+@keyframes grow-bar {
+  from { width: 0 !important; opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 700px) {
+  .skills__bars {
+    grid-template-columns: 1fr;
+  }
+}
