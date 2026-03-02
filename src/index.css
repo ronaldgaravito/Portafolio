@@ -41,6 +41,27 @@
   --radius-full: 9999px;
 
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --bg-scrolled: rgba(10, 10, 15, 0.85);
+}
+
+:root.light {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-card: rgba(0, 0, 0, 0.02);
+  --bg-card-hover: rgba(0, 0, 0, 0.04);
+  
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-glow: rgba(124, 58, 237, 0.2);
+  
+  --shadow-glow: 0 0 40px rgba(124, 58, 237, 0.1);
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.05);
+
+  --gradient-text: linear-gradient(135deg, #7c3aed, #3b82f6, #06b6d4);
+  --bg-scrolled: rgba(248, 250, 252, 0.85);
 }
 
 /* ===== RESET & BASE ===== */
@@ -65,6 +86,7 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* ===== SCROLLBAR ===== */

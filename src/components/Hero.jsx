@@ -1,19 +1,27 @@
 import profileImg from '../assets/ronaldgara.jpg';
+import { useLanguage } from '../context/LanguageContext';
 import './Hero.css';
 
 export default function Hero() {
+  const { t } = useLanguage();
+
   return (
     <section id="hero" className="hero">
       <div className="container">
         <div className="hero__inner">
           {/* Text Side */}
           <div className="hero__content">
-            <div className="hero__badge">
+            <a 
+              href="https://www.linkedin.com/in/ronald-garavito-0320b927a/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hero__badge"
+            >
               <span className="hero__badge-dot"></span>
-              Disponible para trabajar
-            </div>
+              {t.heroBadge}
+            </a>
 
-            <p className="hero__greeting">Hola, soy</p>
+            <p className="hero__greeting">{t.heroGreeting}</p>
             <h1 className="hero__name">
               Ronald<br />
               <span className="hero__name-accent">Garavito Zapata</span>
@@ -21,15 +29,14 @@ export default function Hero() {
 
             <div className="hero__role">
               <span className="hero__role-prefix">&lt;</span>
-              <span className="hero__role-text">Estudiante de Ing. Sistemas</span>
+              <span className="hero__role-text">{t.heroRole}</span>
               <span className="hero__role-prefix">/&gt;</span>
             </div>
 
             <p className="hero__desc">
-              Apasionado por el desarrollo de software, construyendo soluciones
-              modernas con Java, Spring Boot y React. Basado en{' '}
+              {t.heroDesc}{' '}
               <span className="hero__location">
-                📍 Montería, Colombia
+                {t.heroLocation}
               </span>
             </p>
 
@@ -39,10 +46,10 @@ export default function Hero() {
                   <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
                   <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
                 </svg>
-                Ver proyectos
+                {t.heroViewProjects}
               </a>
               <a href="mailto:ronaldgaravito687@gmail.com" className="btn-outline" id="hero-contact">
-                Contáctame
+                {t.cta}
               </a>
             </div>
 
