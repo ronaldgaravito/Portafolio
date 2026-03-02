@@ -1,59 +1,61 @@
 import { useState } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 import './Skills.css';
 
-const skillCategories = [
-  {
-    id: 'backend',
-    label: 'Backend',
-    icon: '🖥️',
-    skills: [
-      { name: 'Java', level: 85, color: '#f89820', icon: '☕' },
-      { name: 'Spring Boot', level: 78, color: '#6db33f', icon: '🍃' },
-      { name: 'MySQL', level: 80, color: '#4479a1', icon: '🗄️' },
-      { name: 'REST APIs', level: 82, color: '#7c3aed', icon: '🔗' },
-    ],
-  },
-  {
-    id: 'frontend',
-    label: 'Frontend',
-    icon: '🎨',
-    skills: [
-      { name: 'React', level: 80, color: '#61dafb', icon: '⚛️' },
-      { name: 'JavaScript', level: 82, color: '#f7df1e', icon: '⚡' },
-      { name: 'HTML5', level: 90, color: '#e34c26', icon: '📄' },
-      { name: 'CSS3', level: 85, color: '#1572b6', icon: '🎨' },
-    ],
-  },
-  {
-    id: 'tools',
-    label: 'Herramientas',
-    icon: '🛠️',
-    skills: [
-      { name: 'Git & GitHub', level: 78, color: '#f05032', icon: '🔧' },
-      { name: 'Vite', level: 75, color: '#646cff', icon: '⚡' },
-      { name: 'Maven', level: 70, color: '#c71a36', icon: '📦' },
-      { name: 'Postman', level: 75, color: '#ef5b25', icon: '🧪' },
-    ],
-  },
-];
-
-const techBadges = [
-  { name: 'Java', color: '#f89820', bg: 'rgba(248,152,32,0.12)' },
-  { name: 'Spring Boot', color: '#6db33f', bg: 'rgba(109,179,63,0.12)' },
-  { name: 'React', color: '#61dafb', bg: 'rgba(97,218,251,0.12)' },
-  { name: 'JavaScript', color: '#f7df1e', bg: 'rgba(247,223,30,0.12)' },
-  { name: 'MySQL', color: '#4479a1', bg: 'rgba(68,121,161,0.12)' },
-  { name: 'HTML5', color: '#e34c26', bg: 'rgba(227,76,38,0.12)' },
-  { name: 'CSS3', color: '#1572b6', bg: 'rgba(21,114,182,0.12)' },
-  { name: 'Git', color: '#f05032', bg: 'rgba(240,80,50,0.12)' },
-  { name: 'Vite', color: '#646cff', bg: 'rgba(100,108,255,0.12)' },
-  { name: 'REST APIs', color: '#a78bfa', bg: 'rgba(167,139,250,0.12)' },
-  { name: 'Maven', color: '#c71a36', bg: 'rgba(199,26,54,0.12)' },
-  { name: 'Postman', color: '#ef5b25', bg: 'rgba(239,91,37,0.12)' },
-];
-
 export default function Skills() {
+  const { t } = useLanguage();
   const [activeTab, setActiveTab] = useState('backend');
+
+  const skillCategories = [
+    {
+      id: 'backend',
+      label: t.skillsBackend,
+      icon: '🖥️',
+      skills: [
+        { name: 'Java', level: 85, color: '#f89820', icon: '☕' },
+        { name: 'Spring Boot', level: 78, color: '#6db33f', icon: '🍃' },
+        { name: 'MySQL', level: 80, color: '#4479a1', icon: '🗄️' },
+        { name: 'REST APIs', level: 82, color: '#7c3aed', icon: '🔗' },
+      ],
+    },
+    {
+      id: 'frontend',
+      label: t.skillsFrontend,
+      icon: '🎨',
+      skills: [
+        { name: 'React', level: 80, color: '#61dafb', icon: '⚛️' },
+        { name: 'JavaScript', level: 82, color: '#f7df1e', icon: '⚡' },
+        { name: 'HTML5', level: 90, color: '#e34c26', icon: '📄' },
+        { name: 'CSS3', level: 85, color: '#1572b6', icon: '🎨' },
+      ],
+    },
+    {
+      id: 'tools',
+      label: t.skillsTools,
+      icon: '🛠️',
+      skills: [
+        { name: 'Git & GitHub', level: 78, color: '#f05032', icon: '🔧' },
+        { name: 'Vite', level: 75, color: '#646cff', icon: '⚡' },
+        { name: 'Maven', level: 70, color: '#c71a36', icon: '📦' },
+        { name: 'Postman', level: 75, color: '#ef5b25', icon: '🧪' },
+      ],
+    },
+  ];
+
+  const techBadges = [
+    { name: 'Java', color: '#f89820', bg: 'rgba(248,152,32,0.12)' },
+    { name: 'Spring Boot', color: '#6db33f', bg: 'rgba(109,179,63,0.12)' },
+    { name: 'React', color: '#61dafb', bg: 'rgba(97,218,251,0.12)' },
+    { name: 'JavaScript', color: '#f7df1e', bg: 'rgba(247,223,30,0.12)' },
+    { name: 'MySQL', color: '#4479a1', bg: 'rgba(68,121,161,0.12)' },
+    { name: 'HTML5', color: '#e34c26', bg: 'rgba(227,76,38,0.12)' },
+    { name: 'CSS3', color: '#1572b6', bg: 'rgba(21,114,182,0.12)' },
+    { name: 'Git', color: '#f05032', bg: 'rgba(240,80,50,0.12)' },
+    { name: 'Vite', color: '#646cff', bg: 'rgba(100,108,255,0.12)' },
+    { name: 'REST APIs', color: '#a78bfa', bg: 'rgba(167,139,250,0.12)' },
+    { name: 'Maven', color: '#c71a36', bg: 'rgba(199,26,54,0.12)' },
+    { name: 'Postman', color: '#ef5b25', bg: 'rgba(239,91,37,0.12)' },
+  ];
 
   const activeCategory = skillCategories.find((c) => c.id === activeTab);
 
@@ -62,11 +64,10 @@ export default function Skills() {
       <div className="container">
         {/* Header */}
         <div className="skills__header">
-          <span className="section-tag">✦ Habilidades</span>
-          <h2 className="section-title">Mi Stack Tecnológico</h2>
+          <span className="section-tag">{t.skillsTag}</span>
+          <h2 className="section-title">{t.skillsTitle}</h2>
           <p className="section-subtitle">
-            Tecnologías con las que construyo soluciones modernas, desde APIs robustas
-            hasta interfaces de usuario interactivas.
+            {t.skillsSubtitle}
           </p>
         </div>
 

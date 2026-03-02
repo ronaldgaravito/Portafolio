@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 import './Contact.css';
 
 const contactLinks = [
@@ -45,6 +46,7 @@ const contactLinks = [
 ];
 
 export default function Contact() {
+  const { t } = useLanguage();
   const [copied, setCopied] = useState(false);
 
   const copyEmail = () => {
@@ -59,11 +61,10 @@ export default function Contact() {
         <div className="contact__inner">
           {/* Header */}
           <div className="contact__header">
-            <span className="section-tag">✦ Contacto</span>
-            <h2 className="section-title">¿Hablamos?</h2>
+            <span className="section-tag">{t.contactTag}</span>
+            <h2 className="section-title">{t.contactTitle}</h2>
             <p className="section-subtitle">
-              Estoy disponible para oportunidades laborales, colaboraciones en proyectos
-              o simplemente para conectar. ¡No dudes en escribirme!
+              {t.contactSubtitle}
             </p>
           </div>
 
@@ -104,7 +105,7 @@ export default function Contact() {
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                     <path d="M20 6 9 17l-5-5"/>
                   </svg>
-                  ¡Copiado!
+                  {t.contactCopied}
                 </>
               ) : (
                 <>
@@ -112,7 +113,7 @@ export default function Contact() {
                     <rect width="14" height="14" x="8" y="8" rx="2"/>
                     <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
                   </svg>
-                  Copiar email
+                  {t.contactCopyEmail}
                 </>
               )}
             </button>
@@ -121,9 +122,9 @@ export default function Contact() {
           {/* Footer Quote */}
           <div className="contact__footer">
             <p className="contact__quote">
-              "El código limpio siempre parece que fue escrito por alguien que se preocupa."
+              {t.contactQuote}
             </p>
-            <span className="contact__quote-author">— Robert C. Martin</span>
+            <span className="contact__quote-author">{t.contactAuthor}</span>
           </div>
         </div>
       </div>
@@ -136,7 +137,7 @@ export default function Contact() {
               <span style={{color:'#a78bfa'}}>&lt;</span>RG<span style={{color:'#a78bfa'}}>/&gt;</span>
             </span>
             <p className="contact__bottom-copy">
-              © 2025 Ronald Garavito Zapata • Hecho con ❤️ y React
+              © 2025 Ronald Garavito Zapata • {t.contactFooter}
             </p>
             <div className="contact__bottom-socials">
               {contactLinks.map((l) => (
