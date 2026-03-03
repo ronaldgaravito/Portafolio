@@ -24,9 +24,9 @@
 .skills__badge {
   display: inline-flex;
   align-items: center;
-  padding: 6px 14px;
+  padding: 8px 18px; /* Slightly more padding for larger icons */
   border-radius: var(--radius-full);
-  font-size: 0.82rem;
+  font-size: 0.9rem; /* Slightly larger text to match */
   font-weight: 600;
   border: 1px solid;
   transition: var(--transition);
@@ -99,7 +99,7 @@
 .skills__bar-info {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
 }
 
 .skills__bar-icon {
@@ -136,6 +136,19 @@
 @keyframes grow-bar {
   from { width: 0 !important; opacity: 0; }
   to { opacity: 1; }
+}
+
+.skills__badge-icon {
+  width: 28px;
+  height: 28px;
+  margin-right: 12px;
+  object-fit: contain;
+}
+
+.skills__bar-icon-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 /* ---- RESPONSIVE ---- */

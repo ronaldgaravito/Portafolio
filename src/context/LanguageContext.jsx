@@ -9,7 +9,7 @@ export const translations = {
     about: "Sobre mí",
     skills: "Habilidades",
     projects: "Proyectos",
-    contact: "Contacto",
+    contact: "Mensaje",
     cta: "Contáctame",
     theme: "Tema",
     lang: "Idioma",
@@ -23,7 +23,7 @@ export const translations = {
     heroBadge: "Disponible para trabajar",
     heroGreeting: "Hola, soy",
     heroRole: "Estudiante de Ing. Sistemas",
-    heroDesc: "Apasionado por el desarrollo de software, construyendo soluciones modernas con Java, Spring Boot y React. Basado en",
+    heroDesc: "Apasionado por el desarrollo de software, construyendo soluciones con Java, Spring Boot y React. Basado en",
     heroLocation: "📍 Montería, Colombia",
     heroViewProjects: "Ver proyectos",
     
@@ -73,7 +73,17 @@ export const translations = {
     contactCopied: "¡Copiado!",
     contactQuote: '"El código limpio siempre parece que fue escrito por alguien que se preocupa."',
     contactAuthor: "— Robert C. Martin",
-    contactFooter: "Hecho con ❤️ y React"
+    contactFooter: "Hecho con ❤️ y React",
+    contactName: "NOMBRE",
+    contactEmailLabel: "CORREO ELECTRÓNICO",
+    contactSubject: "ASUNTO",
+    contactMessage: "MENSAJE",
+    contactPlaceholderName: "Tu nombre",
+    contactPlaceholderEmail: "tu@correo.com",
+    contactPlaceholderSubject: "Oportunidad de proyecto",
+    contactPlaceholderMessage: "Cuéntame sobre tu proyecto u oportunidad...",
+    contactSendMessage: "Enviar Mensaje",
+    contactFormTitle: "Enviame un Mensaje"
   },
   en: {
     // Navbar
@@ -81,7 +91,7 @@ export const translations = {
     about: "About Me",
     skills: "Skills",
     projects: "Projects",
-    contact: "Contact",
+    contact: "Message",
     cta: "Contact Me",
     theme: "Theme",
     lang: "Language",
@@ -145,7 +155,17 @@ export const translations = {
     contactCopied: "Copied!",
     contactQuote: '"Clean code always looks like it was written by someone who cares."',
     contactAuthor: "— Robert C. Martin",
-    contactFooter: "Made with ❤️ and React"
+    contactFooter: "Made with ❤️ and React",
+    contactName: "NAME",
+    contactEmailLabel: "EMAIL",
+    contactSubject: "SUBJECT",
+    contactMessage: "MESSAGE",
+    contactPlaceholderName: "Your name",
+    contactPlaceholderEmail: "you@company.com",
+    contactPlaceholderSubject: "Project opportunity",
+    contactPlaceholderMessage: "Tell me about your project or opportunity...",
+    contactSendMessage: "Send Message",
+    contactFormTitle: "Send me a Message"
   }
 };
 
