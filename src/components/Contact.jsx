@@ -93,6 +93,62 @@ export default function Contact() {
             ))}
           </div>
 
+          <div className="contact__scroll-indicator">
+            <button 
+              className="contact__scroll-btn" 
+              onClick={() => {
+                document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              aria-label="Scroll to form"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="m7 13 5 5 5-5M7 6l5 5 5-5"/>
+              </svg>
+            </button>
+          </div>
+
+          {/* Contact Form */}
+          <div id="contact-form" className="contact__form-container glass-card">
+            <h3 className="contact__form-title">{t.contactFormTitle}</h3>
+            <form className="contact__form">
+              <div className="contact__form-group">
+                <label className="contact__form-label">{t.contactName}</label>
+                <div className="contact__input-wrapper">
+                  <svg className="contact__input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                  <input type="text" placeholder={t.contactPlaceholderName} className="contact__input" />
+                </div>
+              </div>
+
+              <div className="contact__form-group">
+                <label className="contact__form-label">{t.contactEmailLabel}</label>
+                <div className="contact__input-wrapper">
+                  <svg className="contact__input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                  <input type="email" placeholder={t.contactPlaceholderEmail} className="contact__input" />
+                </div>
+              </div>
+
+              <div className="contact__form-group">
+                <label className="contact__form-label">{t.contactSubject}</label>
+                <div className="contact__input-wrapper">
+                  <svg className="contact__input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="21" x2="3" y1="6" y2="6"></line><line x1="21" x2="3" y1="12" y2="12"></line><line x1="21" x2="3" y1="18" y2="18"></line></svg>
+                  <input type="text" placeholder={t.contactPlaceholderSubject} className="contact__input" />
+                </div>
+              </div>
+
+              <div className="contact__form-group">
+                <label className="contact__form-label">{t.contactMessage}</label>
+                <div className="contact__input-wrapper contact__input-wrapper--textarea">
+                  <textarea placeholder={t.contactPlaceholderMessage} className="contact__input contact__input--textarea"></textarea>
+                </div>
+              </div>
+
+              <button type="submit" className="contact__form-submit">
+                {t.contactSendMessage}
+                <svg className="contact__submit-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="22" x2="11" y1="2" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </form>
+          </div>
+
           {/* Copy Email Button */}
           <div className="contact__copy">
             <button
