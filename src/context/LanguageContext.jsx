@@ -83,7 +83,10 @@ export const translations = {
     contactPlaceholderSubject: "Oportunidad de proyecto",
     contactPlaceholderMessage: "Cuéntame sobre tu proyecto u oportunidad...",
     contactSendMessage: "Enviar Mensaje",
-    contactFormTitle: "Enviame un Mensaje"
+    contactFormTitle: "Enviame un Mensaje",
+    contactSending: "Enviando...",
+    contactSuccess: "¡Mensaje enviado con éxito!",
+    contactError: "Hubo un error al enviar el mensaje."
   },
   en: {
     // Navbar
@@ -165,7 +168,10 @@ export const translations = {
     contactPlaceholderSubject: "Project opportunity",
     contactPlaceholderMessage: "Tell me about your project or opportunity...",
     contactSendMessage: "Send Message",
-    contactFormTitle: "Send me a Message"
+    contactFormTitle: "Send me a Message",
+    contactSending: "Sending...",
+    contactSuccess: "Message sent successfully!",
+    contactError: "There was an error sending the message."
   }
 };
 
