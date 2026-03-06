@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import { useLanguage } from '../context/LanguageContext';
 import './Contact.css';
 
@@ -47,12 +48,36 @@ const contactLinks = [
 
 export default function Contact() {
   const { t } = useLanguage();
+  const form = useRef();
   const [copied, setCopied] = useState(false);
+  const [status, setStatus] = useState(null); // 'sending', 'success', 'error'
 
   const copyEmail = () => {
     navigator.clipboard.writeText('ronaldgaravito687@gmail.com');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setStatus('sending');
+
+    emailjs.sendForm(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      form.current,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    )
+    .then((result) => {
+      console.log(result.text);
+      setStatus('success');
+      form.current.reset();
+      setTimeout(() => setStatus(null), 5000);
+    }, (error) => {
+      console.log(error.text);
+      setStatus('error');
+      setTimeout(() => setStatus(null), 5000);
+    });
   };
 
   return (
@@ -110,12 +135,12 @@ export default function Contact() {
           {/* Contact Form */}
           <div id="contact-form" className="contact__form-container glass-card">
             <h3 className="contact__form-title">{t.contactFormTitle}</h3>
-            <form className="contact__form">
+            <form ref={form} onSubmit={handleSubmit} className="contact__form">
               <div className="contact__form-group">
                 <label className="contact__form-label">{t.contactName}</label>
                 <div className="contact__input-wrapper">
                   <svg className="contact__input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                  <input type="text" placeholder={t.contactPlaceholderName} className="contact__input" />
+                  <input name="user_name" type="text" placeholder={t.contactPlaceholderName} className="contact__input" required />
                 </div>
               </div>
 
@@ -123,7 +148,7 @@ export default function Contact() {
                 <label className="contact__form-label">{t.contactEmailLabel}</label>
                 <div className="contact__input-wrapper">
                   <svg className="contact__input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-                  <input type="email" placeholder={t.contactPlaceholderEmail} className="contact__input" />
+                  <input name="user_email" type="email" placeholder={t.contactPlaceholderEmail} className="contact__input" required />
                 </div>
               </div>
 
@@ -131,21 +156,25 @@ export default function Contact() {
                 <label className="contact__form-label">{t.contactSubject}</label>
                 <div className="contact__input-wrapper">
                   <svg className="contact__input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="21" x2="3" y1="6" y2="6"></line><line x1="21" x2="3" y1="12" y2="12"></line><line x1="21" x2="3" y1="18" y2="18"></line></svg>
-                  <input type="text" placeholder={t.contactPlaceholderSubject} className="contact__input" />
+                  <input name="subject" type="text" placeholder={t.contactPlaceholderSubject} className="contact__input" required />
                 </div>
               </div>
 
               <div className="contact__form-group">
                 <label className="contact__form-label">{t.contactMessage}</label>
                 <div className="contact__input-wrapper contact__input-wrapper--textarea">
-                  <textarea placeholder={t.contactPlaceholderMessage} className="contact__input contact__input--textarea"></textarea>
+                  <textarea name="message" placeholder={t.contactPlaceholderMessage} className="contact__input contact__input--textarea" required></textarea>
                 </div>
               </div>
 
-              <button type="submit" className="contact__form-submit">
-                {t.contactSendMessage}
+              <button type="submit" disabled={status === 'sending'} className={`contact__form-submit ${status === 'sending' ? 'sending' : ''}`}>
+                {status === 'sending' ? t.contactSending : status === 'success' ? t.contactSuccess : t.contactSendMessage}
                 <svg className="contact__submit-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="22" x2="11" y1="2" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
               </button>
+
+              {status === 'error' && (
+                <p className="contact__form-status error">{t.contactError}</p>
+              )}
             </form>
           </div>
 
