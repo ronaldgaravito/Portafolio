@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import ReCAPTCHA from "react-google-recaptcha";
 import { useLanguage } from '../context/LanguageContext';
 import './Contact.css';
 
@@ -49,6 +50,7 @@ const contactLinks = [
 export default function Contact() {
   const { t } = useLanguage();
   const form = useRef();
+  const recaptchaRef = useRef();
   const [copied, setCopied] = useState(false);
   const [status, setStatus] = useState(null); // 'sending', 'success', 'error'
 
@@ -60,6 +62,13 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    const recaptchaValue = recaptchaRef.current.getValue();
+    if (!recaptchaValue) {
+      alert("Por favor, marca la casilla 'No soy un robot'");
+      return;
+    }
+
     setStatus('sending');
 
     emailjs.sendForm(
@@ -72,6 +81,7 @@ export default function Contact() {
       console.log(result.text);
       setStatus('success');
       form.current.reset();
+      recaptchaRef.current.reset();
       setTimeout(() => setStatus(null), 5000);
     }, (error) => {
       console.log(error.text);
@@ -165,6 +175,14 @@ export default function Contact() {
                 <div className="contact__input-wrapper contact__input-wrapper--textarea">
                   <textarea name="message" placeholder={t.contactPlaceholderMessage} className="contact__input contact__input--textarea" required></textarea>
                 </div>
+              </div>
+
+              <div className="contact__form-group contact__form-group--captcha">
+                <ReCAPTCHA
+                  ref={recaptchaRef}
+                  sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                  theme="dark"
+                />
               </div>
 
               <button type="submit" disabled={status === 'sending'} className={`contact__form-submit ${status === 'sending' ? 'sending' : ''}`}>
