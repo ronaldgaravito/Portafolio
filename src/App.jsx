@@ -1,10 +1,10 @@
 import './App.css';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import Navbar from './components/layout/Navbar/Navbar';
+import Hero from './components/sections/Hero/Hero';
+import About from './components/sections/About/About';
+import Skills from './components/sections/Skills/Skills';
+import Projects from './components/sections/Projects/Projects';
+import Contact from './components/sections/Contact/Contact';
 import { LanguageProvider } from './context/LanguageContext';
 
 function App() {

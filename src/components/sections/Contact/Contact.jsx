@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import ReCAPTCHA from "react-google-recaptcha";
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../../../context/LanguageContext';
 import './Contact.css';
 
 const contactLinks = [
