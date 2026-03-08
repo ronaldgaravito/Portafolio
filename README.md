@@ -4,7 +4,7 @@
 
 ---
 <div align="center">
-### [ Visitar mi Portafolio en Vivo →](https://portafolio-iota-blush-71.vercel.app/)
+ [ Visitar mi Portafolio en Vivo →](https://portafolio-iota-blush-71.vercel.app/)
 </div>
 
 ---
@@ -81,7 +81,7 @@ Si quieres clonar este proyecto y probarlo en tu máquina:
 ---
 
 <div align="center">
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-black?style=for-the-badge&logo=vercel&logoColor=white)](https://tu-proyecto.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-black?style=for-the-badge&logo=vercel&logoColor=white)](https://portafolio-iota-blush-71.vercel.app/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 ---

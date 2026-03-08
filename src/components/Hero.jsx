@@ -1,13 +1,16 @@
 import profileImg from '../assets/ronaldgara.jpg';
 import { useLanguage } from '../context/LanguageContext';
 import './Hero.css';
+import AntigravityBackground from './AntigravityBackground';
 
 export default function Hero() {
   const { t } = useLanguage();
 
   return (
     <section id="hero" className="hero">
+      <AntigravityBackground />
       <div className="container">
+
         <div className="hero__inner">
           {/* Text Side */}
           <div className="hero__content">
