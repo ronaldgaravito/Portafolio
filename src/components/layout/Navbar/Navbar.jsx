@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Monitor, Sun, Moon, Languages, ChevronDown } from "lucide-react";
-import { useLanguage } from "../context/LanguageContext";
+import { useLanguage } from "../../../context/LanguageContext";
 import "./Navbar.css";
 
 const navLinks = [

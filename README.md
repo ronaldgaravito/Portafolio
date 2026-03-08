@@ -39,12 +39,15 @@ El proyecto sigue una arquitectura organizada y modular:
 
 ```bash
 ├── 📁 src
-│   ├── 📁 components    # Componentes reutilizables (Hero, Projects, Contact, etc.)
-│   ├── 📁 context       # Gestión de estado global (Idiomas, Temas)
-│   ├── 📁 assets        # Imágenes, iconos y recursos
-│   └── 📄 App.jsx       # Punto de entrada principal
-├── 📄 .env              # Variables de entorno (EmailJS, ReCAPTCHA)
-└── 📄 README.md         # Lo que estás leyendo ahora 
+│   ├── 📁 components    # Componentes modulares y organizados
+│   │   ├── 📁 layout    # Elementos estructurales (Navbar)
+│   │   ├── 📁 sections  # Secciones de la página (Hero, About, Projects, etc.)
+│   │   └── 📁 features  # Funcionalidades especiales (Animaciones Antigravity)
+│   ├── 📁 context        # Gestión de estado global (Idiomas, Temas)
+│   ├── 📁 assets         # Imágenes, iconos y recursos
+│   └── 📄 App.jsx        # Punto de entrada principal
+├── 📄 .env               # Variables de entorno (EmailJS, ReCAPTCHA)
+└── 📄 README.md          # Lo que estás leyendo ahora 
 ```
 
 ---

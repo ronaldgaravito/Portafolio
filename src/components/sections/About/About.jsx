@@ -1,4 +1,4 @@
-import { useLanguage } from '../context/LanguageContext';
+import { useLanguage } from '../../../context/LanguageContext';
 import './About.css';
 
 export default function About() {

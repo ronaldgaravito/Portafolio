@@ -1,7 +1,7 @@
-import profileImg from '../assets/ronaldgara.jpg';
-import { useLanguage } from '../context/LanguageContext';
+import profileImg from '../../../assets/ronaldgara.jpg';
+import { useLanguage } from '../../../context/LanguageContext';
 import './Hero.css';
-import AntigravityBackground from './AntigravityBackground';
+import AntigravityBackground from '../../features/Antigravity/AntigravityBackground';
 
 export default function Hero() {
   const { t } = useLanguage();
