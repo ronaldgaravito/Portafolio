@@ -1,6 +1,12 @@
 import { useLanguage } from '../../../context/LanguageContext';
 import './Projects.css';
 
+// Import images
+import imgClima from '../../../assets/4.png';
+import imgSpring1 from '../../../assets/2.png';
+import imgSpring2 from '../../../assets/3.png';
+import imgAPI from '../../../assets/Captura.png';
+
 export default function Projects() {
   const { t } = useLanguage();
 
@@ -15,6 +21,7 @@ export default function Projects() {
       github: 'https://github.com/ronaldgaravito/App-clima.git',
       demo: null,
       featured: true,
+      image: imgClima,
     },
     {
       id: 2,
@@ -26,6 +33,7 @@ export default function Projects() {
       github: 'https://github.com/ronaldgaravito/inventory-system.git',
       demo: null,
       featured: false,
+      images: [imgSpring1, imgSpring2],
     },
     {
       id: 3,
@@ -37,6 +45,7 @@ export default function Projects() {
       github: 'https://github.com/Proyecto-en-grupo/ing-proyecto-.git',
       demo: null,
       featured: true,
+      image: imgAPI,
     },
   ];
 
@@ -97,6 +106,24 @@ export default function Projects() {
                     </a>
                   )}
                 </div>
+              </div>
+
+              {/* Project Image */}
+              <div className="project-card__image-container">
+                {project.images ? (
+                  <div className="project-card__slideshow">
+                    {project.images.map((img, index) => (
+                      <img 
+                        key={index} 
+                        src={img} 
+                        alt={`${project.title} - ${index + 1}`} 
+                        className={`project-card__img project-card__img--${index}`} 
+                      />
+                    ))}
+                  </div>
+                ) : (
+                  <img src={project.image} alt={project.title} className="project-card__img" />
+                )}
               </div>
 
               {/* Card Body */}
