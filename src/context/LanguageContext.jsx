@@ -26,6 +26,7 @@ export const translations = {
     heroDesc: "Apasionado por el desarrollo de software, construyendo soluciones con Java, Spring Boot y React. Basado en",
     heroLocation: "📍 Montería, Colombia",
     heroViewProjects: "Ver proyectos",
+    heroDownloadCV: "Descargar CV",
     
     // About
     aboutTag: "✦ Sobre mí",
@@ -44,6 +45,7 @@ export const translations = {
     aboutStatYears: "Años estudiando",
     aboutStatProjects: "Proyectos",
     aboutStatTech: "Tecnologías",
+    aboutDownloadCV: "Descargar CV",
     
     // Skills
     skillsTag: "✦ Habilidades",
@@ -111,6 +113,7 @@ export const translations = {
     heroDesc: "Passionate about software development, building modern solutions with Java, Spring Boot and React. Based in",
     heroLocation: "📍 Montería, Colombia",
     heroViewProjects: "View projects",
+    heroDownloadCV: "Download CV",
     
     // About
     aboutTag: "✦ About Me",
@@ -129,6 +132,7 @@ export const translations = {
     aboutStatYears: "Years studying",
     aboutStatProjects: "Projects",
     aboutStatTech: "Technologies",
+    aboutDownloadCV: "Download CV",
 
     // Skills
     skillsTag: "✦ Skills",
