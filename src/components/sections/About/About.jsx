@@ -1,13 +1,13 @@
-import { useLanguage } from '../../../context/LanguageContext';
-import './About.css';
+import { useLanguage } from "../../../context/LanguageContext";
+import "./About.css";
 
 export default function About() {
   const { t } = useLanguage();
 
   const stats = [
-    { number: '3+', label: t.aboutStatYears },
-    { number: '10+', label: t.aboutStatProjects },
-    { number: '5+', label: t.aboutStatTech },
+    { number: "3+", label: t.aboutStatYears },
+    { number: "10+", label: t.aboutStatProjects },
+    { number: "5+", label: t.aboutStatTech },
   ];
 
   return (
@@ -17,28 +17,33 @@ export default function About() {
           {/* Left: Text */}
           <div className="about__content">
             <span className="section-tag">{t.aboutTag}</span>
-            <h2 className="section-title">{t.aboutTitle.split(',').map((part, i) => (
-              <span key={i}>{part}{i === 0 && <br />}</span>
-            ))}</h2>
-            <p className="about__text">
-              {t.aboutText1}
-            </p>
-            <p className="about__text">
-              {t.aboutText2}
-            </p>
+            <h2 className="section-title">
+              {t.aboutTitle.split(",").map((part, i) => (
+                <span key={i}>
+                  {part}
+                  {i === 0 && <br />}
+                </span>
+              ))}
+            </h2>
+            <p className="about__text">{t.aboutText1}</p>
+            <p className="about__text">{t.aboutText2}</p>
 
             <div className="about__info-grid">
               <div className="about__info-item">
                 <span className="about__info-icon">🎓</span>
                 <div>
                   <span className="about__info-label">{t.aboutInfoCareer}</span>
-                  <span className="about__info-value">{t.aboutInfoSystems}</span>
+                  <span className="about__info-value">
+                    {t.aboutInfoSystems}
+                  </span>
                 </div>
               </div>
               <div className="about__info-item">
                 <span className="about__info-icon">📍</span>
                 <div>
-                  <span className="about__info-label">{t.aboutInfoLocation}</span>
+                  <span className="about__info-label">
+                    {t.aboutInfoLocation}
+                  </span>
                   <span className="about__info-value">Montería, Colombia</span>
                 </div>
               </div>
@@ -46,14 +51,20 @@ export default function About() {
                 <span className="about__info-icon">💼</span>
                 <div>
                   <span className="about__info-label">{t.aboutInfoStatus}</span>
-                  <span className="about__info-value">{t.aboutInfoStatusVal}</span>
+                  <span className="about__info-value">
+                    {t.aboutInfoStatusVal}
+                  </span>
                 </div>
               </div>
               <div className="about__info-item">
                 <span className="about__info-icon">🌐</span>
                 <div>
-                  <span className="about__info-label">{t.aboutInfoLanguages}</span>
-                  <span className="about__info-value">{t.aboutInfoLanguagesVal}</span>
+                  <span className="about__info-label">
+                    {t.aboutInfoLanguages}
+                  </span>
+                  <span className="about__info-value">
+                    {t.aboutInfoLanguagesVal}
+                  </span>
                 </div>
               </div>
             </div>
@@ -64,8 +75,15 @@ export default function About() {
                 className="btn-primary"
                 id="about-contact-btn"
               >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l.96-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l.96-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
                 </svg>
                 {t.aboutTalk}
               </a>
@@ -80,15 +98,24 @@ export default function About() {
               </a>
               <a
                 href="/cv ronald.pdf"
-                download="cv ronald.pdf"
+                download="CV_Ronald_Garavito.pdf"
                 className="btn-outline"
-                style={{ marginLeft: '1rem' }}
+                style={{ marginLeft: "1rem" }}
                 id="about-download-cv"
               >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                  <polyline points="7 10 12 15 17 10"/>
-                  <line x1="12" y1="15" x2="12" y2="3"/>
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
                 </svg>
                 {t.aboutDownloadCV}
               </a>
@@ -109,20 +136,29 @@ export default function About() {
             {/* Terminal Card */}
             <div className="about__terminal glass-card">
               <div className="about__terminal-header">
-                <span className="about__terminal-dot" style={{background: '#ff5f57'}}></span>
-                <span className="about__terminal-dot" style={{background: '#febc2e'}}></span>
-                <span className="about__terminal-dot" style={{background: '#28c840'}}></span>
+                <span
+                  className="about__terminal-dot"
+                  style={{ background: "#ff5f57" }}
+                ></span>
+                <span
+                  className="about__terminal-dot"
+                  style={{ background: "#febc2e" }}
+                ></span>
+                <span
+                  className="about__terminal-dot"
+                  style={{ background: "#28c840" }}
+                ></span>
                 <span className="about__terminal-title">ronald.json</span>
               </div>
               <pre className="about__terminal-body">
-{`{
+                {`{
   "nombre": "Ronald Garavito Zapata",
-  "rol": "Full Stack Developer",
+  "rol": "Backend Developer",
   "ciudad": "Montería, Colombia",
   "stack": ["Java", "Spring Boot",
-            "React", "MySQL"],
+            "JavaScript", "MySQL"],
   "disponible": true,
-  "passion": "Clean Code 🚀"
+  "passion": "Clean Code "
 }`}
               </pre>
             </div>

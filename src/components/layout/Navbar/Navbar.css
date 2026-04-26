@@ -30,27 +30,33 @@
 
 /* Logo */
 .navbar__logo {
-  font-family: 'Fira Code', monospace;
-  font-size: 1.3rem;
-  font-weight: 700;
+  font-family: "Fira Code", "Courier New", monospace;
+  font-size: 1.6rem;
+  font-weight: 800;
   text-decoration: none;
   color: var(--text-primary);
   display: flex;
   align-items: center;
   gap: 2px;
   transition: var(--transition);
+  letter-spacing: -1px;
 }
 
 .navbar__logo:hover {
-  filter: drop-shadow(0 0 8px rgba(124, 58, 237, 0.6));
+  filter: drop-shadow(0 0 10px rgba(138, 43, 226, 0.7));
+  transform: scale(1.05);
 }
 
 .navbar__logo-bracket {
-  color: var(--accent-purple);
+  color: #8a2be2; /* Violeta/Morado para los brackets */
 }
 
 .navbar__logo-name {
-  background: var(--gradient-text);
+  background: linear-gradient(
+    90deg,
+    #80b3ff,
+    #4dd2ff
+  ); /* Gradiente azul claro/cyan */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -75,7 +81,7 @@
 }
 
 .navbar__link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 4px;
   left: 50%;
@@ -148,7 +154,9 @@
   -webkit-backdrop-filter: blur(20px);
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.4s ease;
+  transition:
+    max-height 0.4s ease,
+    padding 0.4s ease;
 }
 
 .navbar__mobile--open {
@@ -331,9 +339,8 @@
   .navbar__mobile {
     display: flex;
   }
-  
+
   .navbar__toolbar {
     gap: 0.5rem;
   }
 }
-
