@@ -64,8 +64,8 @@ export const translations = {
     project1Desc: "Aplicación web que consume una API meteorológica en tiempo real para mostrar pronósticos del clima por ciudad. Interfaz moderna con datos dinámicos.",
     project2Title: "API Spring Boot",
     project2Desc: "Backend RESTful construido con Java y Spring Boot. Incluye entidades, repositorios, servicios y controladores para una arquitectura limpia y escalable.",
-    project3Title: "Consumo de API (Grupal)",
-    project3Desc: "Proyecto grupal enfocado en el consumo de una API y la implementación de mejoras a la aplicación.",
+    project3Title: "DB Designer",
+    project3Desc: "Herramienta visual para el diseño de bases de datos y creación de esquemas, permitiendo a los usuarios modelar arquitecturas de datos de manera intuitiva y rápida.",
 
     // Contact
     contactTag: "✦ Contacto",
@@ -151,8 +151,8 @@ export const translations = {
     project1Desc: "Web application that consumes a real-time weather API to show weather forecasts by city. Modern interface with dynamic data.",
     project2Title: "Spring Boot API",
     project2Desc: "RESTful backend built with Java and Spring Boot. Includes entities, repositories, services, and controllers for a clean and scalable architecture.",
-    project3Title: "API Consumption (Group)",
-    project3Desc: "Group project focused on consuming an API and implementing improvements to the application.",
+    project3Title: "DB Designer",
+    project3Desc: "Visual tool for database design and schema creation, allowing users to model data architectures intuitively and quickly.",
 
     // Contact
     contactTag: "✦ Contact",
