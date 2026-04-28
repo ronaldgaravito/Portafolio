@@ -125,6 +125,65 @@
   50%, 90% { opacity: 1; visibility: visible; }
 }
 
+/* Carousel with arrows */
+.project-card__carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-btn--prev {
+  left: 8px;
+}
+
+.carousel-btn--next {
+  right: 8px;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transition: background 0.2s;
+}
+
+.carousel-dot.active {
+  background: white;
+}
+
 .project-card__title {
   font-size: 1.25rem;
   font-weight: 700;
@@ -246,6 +305,73 @@
   object-fit: cover;
   border-radius: var(--radius-md);
   border: 1px solid var(--border-subtle);
+}
+
+/* Carousel in Modal */
+.project-modal-carousel {
+  position: relative;
+  width: calc(100% - 5rem);
+  margin: 2.5rem 2.5rem 0 2.5rem;
+  max-height: 400px;
+}
+
+.project-modal-carousel .project-modal-img {
+  width: 100%;
+  margin: 0;
+}
+
+.modal-carousel-btn--prev {
+  position: absolute;
+  left: -2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.modal-carousel-btn--next {
+  position: absolute;
+  right: -2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.modal-carousel-btn--prev:hover,
+.modal-carousel-btn--next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-carousel-dots {
+  position: absolute;
+  bottom: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
 }
 
 .project-modal-info {
