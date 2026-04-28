@@ -62,8 +62,8 @@ export const translations = {
     projectsViewAll: "Ver todos en GitHub",
     project1Title: "App del Clima",
     project1Desc: "Aplicación web que consume una API meteorológica en tiempo real para mostrar pronósticos del clima por ciudad. Interfaz moderna con datos dinámicos.",
-    project2Title: "API Spring Boot",
-    project2Desc: "Backend RESTful construido con Java y Spring Boot. Incluye entidades, repositorios, servicios y controladores para una arquitectura limpia y escalable.",
+    project2Title: "Sistema de Inventario",
+    project2Desc: "Sistema completo de gestión de inventario construido con Java y Spring Boot. Incluye gestión de productos, ventas, compras y usuarios con interfaz moderna en React.",
     project3Title: "DB Designer",
     project3Desc: "Herramienta visual para el diseño de bases de datos y creación de esquemas, permitiendo a los usuarios modelar arquitecturas de datos de manera intuitiva y rápida.",
 
@@ -149,8 +149,8 @@ export const translations = {
     projectsViewAll: "View all on GitHub",
     project1Title: "Weather App",
     project1Desc: "Web application that consumes a real-time weather API to show weather forecasts by city. Modern interface with dynamic data.",
-    project2Title: "Spring Boot API",
-    project2Desc: "RESTful backend built with Java and Spring Boot. Includes entities, repositories, services, and controllers for a clean and scalable architecture.",
+    project2Title: "Inventory System",
+    project2Desc: "Complete inventory management system built with Java and Spring Boot. Includes product management, sales, purchases and users with modern React frontend.",
     project3Title: "DB Designer",
     project3Desc: "Visual tool for database design and schema creation, allowing users to model data architectures intuitively and quickly.",
 
