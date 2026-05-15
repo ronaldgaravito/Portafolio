@@ -1,4 +1,4 @@
-import profileImg from "../../../assets/ronaldgara.jpg";
+import profileImg from "../../../assets/FotoR.png";
 import { useLanguage } from "../../../context/LanguageContext";
 import "./Hero.css";
 import AntigravityBackground from "../../features/Antigravity/AntigravityBackground";
