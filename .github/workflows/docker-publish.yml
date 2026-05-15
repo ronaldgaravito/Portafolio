@@ -2,7 +2,7 @@ name: Docker Build and Push
 
 on:
   push:
-    branches: [ "feature" ] # Cambia a "master" si tu rama principal se llama así
+    branches: [ "main", "master" ]
 
 jobs:
   build-and-push:
@@ -20,10 +20,12 @@ jobs:
       - name: Construir y subir imagen
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./Portafolio
+          file: ./Portafolio/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/mi-portafolio:latest
-          # Aquí pasamos los secretos de tu .env como build-args
+          tags: |
+            ${{ secrets.DOCKERHUB_USERNAME }}/portafolio:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/portafolio:${{ github.sha }}
           build-args: |
             VITE_EMAILJS_SERVICE_ID=${{ secrets.VITE_EMAILJS_SERVICE_ID }}
             VITE_EMAILJS_TEMPLATE_ID=${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
