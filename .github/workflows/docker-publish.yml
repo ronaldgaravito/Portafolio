@@ -2,7 +2,7 @@ name: Docker Build and Push
 
 on:
   push:
-    branches: [ "master" ] # Cambia a "master" si tu rama principal se llama así
+    branches: [ "feature" ] # Cambia a "master" si tu rama principal se llama así
 
 jobs:
   build-and-push:
