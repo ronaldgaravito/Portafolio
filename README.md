@@ -1,94 +1,136 @@
-#  Mi Portafolio Personal - Ronald Garavito
+# Portafolio Personal - Ronald Garavito
 
-¡Bienvenido a mi portafolio! Soy **Ronald Garavito**, estudiante de **Ingeniería de Sistemas** apasionado por crear soluciones tecnológicas impactantes y elegantes. Este proyecto es una vitrina de mis habilidades, experiencia y los proyectos en los que he trabajado.
-
----
-<div align="center">
- [ Visitar mi Portafolio en Vivo →](https://portafolio-iota-blush-71.vercel.app/)
-</div>
-
----
-
-##  Características Principales
-
--  **Multilingüe:** Soporte completo para **Español** e **Inglés**.
--  **Modo Oscuro/Claro:** Interfaz dinámica con persistencia de tema.
--  **Diseño Responsive:** Optimizado para cualquier dispositivo.
--  **Estética Premium:** Uso de glassmorphism, gradientes modernos y micro-animaciones.
--  **Contacto Directo:** Formulario integrado con **EmailJS** y protección **reCAPTCHA**.
-
----
-
-## Stack Tecnológico
+Portafolio personal construido con **React** y **Vite** para presentar mi perfil, habilidades, proyectos y formas de contacto en una experiencia single-page, responsive y bilingüe.
 
 <div align="center">
-
-| **Frontend** | **Backend** | **Herramientas** |
-| :--- | :--- | :--- |
-| ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) | ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white) | ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white) |
-| ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white) | ![SpringBoot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white) | ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white) |
-| ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) | ![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white) | ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white) |
-
+  <a href="https://portafolio-iota-blush-71.vercel.app/">Ver demo en vivo</a>
 </div>
 
----
+## Resumen
 
-##  Estructura del Proyecto
+La app está pensada como una landing profesional con navegación por secciones, cambio de idioma, tema claro/oscuro/sistema y una experiencia visual con fondos animados y carga diferida de contenido.
 
-El proyecto sigue una arquitectura organizada y modular:
+Incluye estas secciones:
+
+- Hero con presentación principal y acceso rápido al CV.
+- About con resumen personal, datos clave y enlace a GitHub.
+- Skills con categorías de tecnologías y badges visuales.
+- Projects con tarjetas, carrusel de imágenes y modales informativos.
+- Contact con enlaces directos y formulario integrado con EmailJS y reCAPTCHA.
+
+## Características
+
+- Multilenguaje en español e inglés.
+- Tema persistente con opciones claro, oscuro y sistema.
+- Layout responsive para escritorio y móvil.
+- Carga diferida de secciones no visibles al inicio para mejorar el rendimiento.
+- Formulario de contacto con validación de reCAPTCHA y envío por EmailJS.
+- Animaciones, cards tipo glassmorphism y fondo decorativo en el hero.
+- Descarga de CV desde el sitio.
+
+## Stack
+
+- React 19
+- Vite
+- CSS personalizado
+- Lucide React
+- EmailJS Browser
+- react-google-recaptcha
+- @react-three/fiber
+- three
+
+## Estructura
 
 ```bash
-├── 📁 src
-│   ├── 📁 components    # Componentes modulares y organizados
-│   │   ├── 📁 layout    # Elementos estructurales (Navbar)
-│   │   ├── 📁 sections  # Secciones de la página (Hero, About, Projects, etc.)
-│   │   └── 📁 features  # Funcionalidades especiales (Animaciones Antigravity)
-│   ├── 📁 context        # Gestión de estado global (Idiomas, Temas)
-│   ├── 📁 assets         # Imágenes, iconos y recursos
-│   └── 📄 App.jsx        # Punto de entrada principal
-├── 📄 .env               # Variables de entorno (EmailJS, ReCAPTCHA)
-└── 📄 README.md          # Lo que estás leyendo ahora 
+src/
+├── App.jsx
+├── App.css
+├── index.css
+├── main.jsx
+├── assets/
+├── components/
+│   ├── features/
+│   │   └── Antigravity/
+│   ├── layout/
+│   │   └── Navbar/
+│   └── sections/
+│       ├── About/
+│       ├── Contact/
+│       ├── Hero/
+│       ├── Projects/
+│       └── Skills/
+└── context/
+    └── LanguageContext.jsx
 ```
 
----
+## Requisitos
 
-##  Instalación Local
+- Node.js 20 o superior.
+- npm.
+- Variables de entorno para EmailJS y reCAPTCHA.
 
-Si quieres clonar este proyecto y probarlo en tu máquina:
+## Variables de entorno
 
-1. **Clona el repositorio:**
-   ```bash
-   git clone https://github.com/ronaldgaravito/Portafolio.git
-   ```
-2. **Instala las dependencias:**
-   ```bash
-   npm install
-   ```
-3. **Crea tu archivo `.env`:**
-   Necesitarás las keys de EmailJS y ReCAPTCHA.
-4. **Inicia el servidor de desarrollo:**
-   ```bash
-   npm run dev
-   ```
+Crea un archivo `.env` en la raíz del proyecto con estas variables:
 
----
+```bash
+VITE_EMAILJS_SERVICE_ID=tu_service_id
+VITE_EMAILJS_TEMPLATE_ID=tu_template_id
+VITE_EMAILJS_PUBLIC_KEY=tu_public_key
+VITE_RECAPTCHA_SITE_KEY=tu_recaptcha_site_key
+```
 
-##  Conectemos
+## Instalación local
 
-¿Tienes un proyecto en mente o simplemente quieres saludar?
+1. Instala dependencias:
 
-- **LinkedIn:** [Ronald Garavito](https://www.linkedin.com/in/ronald-garavito-0320b927a/)
-- **GitHub:** [@ronaldgaravito](https://github.com/ronaldgaravito)
-- **Email:** [ronaldgaravito687@gmail.com](mailto:ronaldgaravito687@gmail.com)
+```bash
+npm install
+```
 
----
+2. Configura el archivo `.env`.
 
-<div align="center">
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-black?style=for-the-badge&logo=vercel&logoColor=white)](https://portafolio-iota-blush-71.vercel.app/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+3. Levanta el entorno de desarrollo:
 
----
-<p align="center">
-  <i>"El código limpio siempre parece que fue escrito por alguien que se preocupa."</i><br>
-  <b>— Robert C. Martin</b>
-</p>
+```bash
+npm run dev
+```
+
+4. Para generar el build de producción:
+
+```bash
+npm run build
+```
+
+5. Para previsualizar el build:
+
+```bash
+npm run preview
+```
+
+## Scripts
+
+- `npm run dev`: inicia Vite en modo desarrollo.
+- `npm run build`: compila la aplicación para producción.
+- `npm run preview`: previsualiza el build localmente.
+- `npm run lint`: ejecuta ESLint sobre el proyecto.
+
+## Docker
+
+El proyecto incluye `Dockerfile` y `docker-compose.yml` para construir y servir la app con Nginx.
+
+```bash
+docker compose up --build
+```
+
+La aplicación queda disponible en `http://localhost:8080`.
+
+## Contacto
+
+- LinkedIn: https://www.linkedin.com/in/ronald-garavito-0320b927a/
+- GitHub: https://github.com/ronaldgaravito
+- Email: ronaldgaravito687@gmail.com
+
+## Nota
+
+El portafolio carga el CV desde el archivo `cv ronald.pdf` ubicado en `public/`.
